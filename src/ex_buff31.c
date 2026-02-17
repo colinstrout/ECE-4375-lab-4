@@ -12,9 +12,9 @@ void *bodyProducer(void *p) {
   struct buffer *buf = targs->buf;
   char name = targs->id;
   for (uint16_t i = 1; i <= 1000; ++i) {
-    // printf("%c: Enqueueing %d into buffer\n", name, i);
+    printf("%c: Enqueueing %d into buffer\n", name, i);
     enqueue(buf, name, i);
-    // fflush(stdout);
+    fflush(stdout);
   }
   return NULL;
 }
