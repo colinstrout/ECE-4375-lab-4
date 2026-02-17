@@ -13,5 +13,10 @@ add_executable(buffer_test
     src/ex_buff_test.c 
     src/ex_buff.c
 )
+add executable(buffer_31
+    src/ex_buff31.c
+    src/ex_buff.c
+)
 
 target_link_libraries(buffer_test PRIVATE Threads::Threads)
+target_link_libraries(buffer_31 PRIVATE Threads::Threads)
