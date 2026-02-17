@@ -7,6 +7,11 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 
 find_package(Threads REQUIRED)
 
-add_executable(buffer_test ex_buff_test.c ex_buff.c)
+include_directories(inc)
+
+add_executable(buffer_test 
+    src/ex_buff_test.c 
+    src/ex_buff.c
+)
 
 target_link_libraries(buffer_test PRIVATE Threads::Threads)
