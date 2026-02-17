@@ -6,11 +6,11 @@ void buffer_init(struct buffer *b) {
   b->count = 0;
 
   if (pthread_mutex_init(&(b->mutex), NULL) != 0) {
-    perror("[ERROR] Error initializing mutex");
+    perror("[ERROR] Error initializing mutex\n");
   }
 
   if (pthread_cond_init(&(b->condition), NULL) != 0) {
-    perror("[ERROR] Condition Variable Initializer Failed");
+    perror("[ERROR] Condition Variable Initializer Failed\n");
     pthread_mutex_destroy(&(b->mutex));
   }
 }

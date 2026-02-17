@@ -4,7 +4,7 @@
 void *bodyProducer(void *p) {
   struct buffer *buf = (struct buffer *)p;
   for (uint16_t i = 1; i <= 1000; ++i) {
-    printf("%c: Enqueueing %d into buffer", 'P', i);
+    printf("%c: Enqueueing %d into buffer\n", 'P', i);
     enqueue(buf, 'P', i);
 
     fflush(stdout);
@@ -20,7 +20,7 @@ void *bodyConsumer(void *p) {
 
     dequeue(buf, &name, &val);
 
-    printf("Dequeued %c, %d from buffer", name, val);
+    printf("Dequeued %c, %d from buffer\n", name, val);
     fflush(stdout);
   }
   return NULL;
