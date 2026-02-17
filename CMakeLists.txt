@@ -13,7 +13,7 @@ add_executable(buffer_test
     src/ex_buff_test.c 
     src/ex_buff.c
 )
-add executable(buffer_31
+add_executable(buffer_31
     src/ex_buff31.c
     src/ex_buff.c
 )
